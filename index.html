@@ -1,0 +1,116 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>JavaScript Programs</title>  
+    <script>  
+        // 1. Check if the input is a number, uppercase letter, or lowercase letter  
+        function checkCharacter() {  
+            var char = prompt("Enter a character:");  
+            var ascii = char.charCodeAt(0);  
+            if (ascii >= 48 && ascii <= 57) {  
+                alert("It's a number.");  
+            } else if (ascii >= 65 && ascii <= 90) {  
+                alert("It's an uppercase letter.");  
+            } else if (ascii >= 97 && ascii <= 122) {  
+                alert("It's a lowercase letter.");  
+            } else {  
+                alert("It's neither a number nor a letter.");  
+            }  
+        }  
+
+        // 2. Compare two integers and display the larger one  
+        function compareIntegers() {  
+            var num1 = parseInt(prompt("Enter the first integer:"));  
+            var num2 = parseInt(prompt("Enter the second integer:"));  
+            if (num1 > num2) {  
+                alert("The larger number is " + num1);  
+            } else if (num1 < num2) {  
+                alert("The larger number is " + num2);  
+            } else {  
+                alert("Both integers are equal.");  
+            }  
+        }  
+
+        // 3. Check if the number is positive, negative, or zero  
+        function checkNumber() {  
+            var number = parseFloat(prompt("Enter a number:"));  
+            if (number > 0) {  
+                alert("The number is positive.");  
+            } else if (number < 0) {  
+                alert("The number is negative.");  
+            } else {  
+                alert("The number is zero.");  
+            }  
+        }  
+
+        // 4. Check if a character is a vowel  
+        function isVowel() {  
+            var char = prompt("Enter a character (single letter):");  
+            if (char.length === 1) {  
+                var vowels = "aeiouAEIOU";  
+                if (vowels.includes(char)) {  
+                    alert("True: It is a vowel.");  
+                } else {  
+                    alert("False: It is not a vowel.");  
+                }  
+            } else {  
+                alert("Please enter a single character.");  
+            }  
+        }  
+
+        // 5. Validate the input password  
+        function validatePassword() {  
+            var correctPassword = "Password123"; // Hardcoded correct password for example  
+            var userInput = prompt("Enter your password:");  
+            if (!userInput) {  
+                alert("Please enter your password.");  
+            } else if (userInput === correctPassword) {  
+                alert("Correct! The password you entered matches the original password.");  
+            } else {  
+                alert("Incorrect password.");  
+            }  
+        }  
+
+        // 6. Fix the if/else statement  
+        function fixGreeting() {  
+            var greeting;  
+            var hour = 13; // Example hour  
+            if (hour < 18) {  
+                greeting = "Good day";  
+            } else {  
+                greeting = "Good evening";  
+            }  
+            alert(greeting);  
+        }  
+
+        // 7. Time input and display corresponding greeting  
+        function timeGreeting() {  
+            var time = parseInt(prompt("Enter time in 24-hour format (e.g., 1900 for 7 PM):"));  
+            if (time >= 0 && time < 1200) {  
+                alert("Good Morning");  
+            } else if (time >= 1200 && time < 1700) {  
+                alert("Good Afternoon");  
+            } else if (time >= 1700 && time < 2100) {  
+                alert("Good Evening");  
+            } else if (time >= 2100 && time < 2400) {  
+                alert("Good Night");  
+            } else {  
+                alert("Invalid time entered. Please enter a valid time in 24-hour format.");  
+            }  
+        }  
+    </script>  
+</head>  
+<body>  
+    <h1>JavaScript Programs</h1>  
+    <h2>Choose a Program to Run</h2>  
+    <button onclick="checkCharacter()">Check Character Type</button>  
+    <button onclick="compareIntegers()">Compare Integers</button>  
+    <button onclick="checkNumber()">Check Number</button>  
+    <button onclick="isVowel()">Check Vowel</button>  
+    <button onclick="validatePassword()">Validate Password</button>  
+    <button onclick="fixGreeting()">Fix Greeting</button>  
+    <button onclick="timeGreeting()">Time Greeting</button>  
+</body>  
+</html>
